@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reusable in-screen header: large title + supporting subtitle. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/ta_space_sm"
+    android:paddingBottom="@dimen/ta_space_md">
+
+    <TextView
+        android:id="@+id/screen_title"
+        style="@style/Widget.TA.ScreenHeader"
+        android:text="@string/title_home"
+        tools:ignore="MissingPrefix"
+        xmlns:tools="http://schemas.android.com/tools"/>
+
+    <TextView
+        android:id="@+id/screen_subtitle"
+        style="@style/Widget.TA.ScreenSubtitle"
+        android:text="@string/subtitle_home"/>
+</LinearLayout>

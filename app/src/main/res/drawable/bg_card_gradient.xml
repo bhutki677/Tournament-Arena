@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/ta_card_corner_radius"/>
+    <gradient
+        android:angle="270"
+        android:startColor="@color/ta_color_gradient_surface_start"
+        android:endColor="@color/ta_color_gradient_surface_end"
+        android:type="linear"/>
+    <stroke android:width="@dimen/ta_stroke_thin" android:color="@color/ta_color_stroke_subtle"/>
+</shape>

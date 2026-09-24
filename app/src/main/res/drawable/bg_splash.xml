@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash window background: arena gradient with a radial glow behind the crest. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/ta_color_bg_space"
+                android:centerColor="@color/ta_color_bg_tertiary"
+                android:endColor="@color/ta_color_bg_space"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="60%p"
+                android:startColor="@color/ta_color_glow_purple"
+                android:endColor="@color/ta_color_transparent"/>
+        </shape>
+    </item>
+</layer-list>

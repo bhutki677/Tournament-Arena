@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tournament Arena - design system palette (dark neo-esports).
+  Naming: ta_color_*  = brand / UI colours,  ta_status_* = workflow state colours.
+  Never hard-code a hex value in a layout or in Java - reference these.
+-->
+<resources>
+    <!-- ===== Base background layers (deep space -> elevated surface) ===== -->
+    <color name="ta_color_bg_space">#04050C</color>
+    <color name="ta_color_bg_primary">#080A16</color>
+    <color name="ta_color_bg_secondary">#0D1024</color>
+    <color name="ta_color_bg_tertiary">#12162E</color>
+    <color name="ta_color_surface">#141A2E</color>
+    <color name="ta_color_surface_elevated">#1B2340</color>
+    <color name="ta_color_surface_high">#232D4F</color>
+    <color name="ta_color_surface_glass">#CC161E36</color>
+    <color name="ta_color_surface_glass_light">#99FFFFFF</color>
+    <color name="ta_color_surface_scrim">#B304050C</color>
+
+    <!-- ===== Brand ===== -->
+    <color name="ta_color_primary">#00E5FF</color>
+    <color name="ta_color_primary_light">#6BF3FF</color>
+    <color name="ta_color_primary_dark">#00A6BF</color>
+    <color name="ta_color_primary_deep">#00596B</color>
+    <color name="ta_color_primary_soft">#2600E5FF</color>
+    <color name="ta_color_secondary">#2F6BFF</color>
+    <color name="ta_color_secondary_dark">#1B45B8</color>
+    <color name="ta_color_tertiary">#7B3BFF</color>
+    <color name="ta_color_tertiary_dark">#5024B5</color>
+    <color name="ta_color_accent">#FF3D8B</color>
+    <color name="ta_color_accent_dark">#C4216A</color>
+    <color name="ta_color_accent_orange">#FF7A18</color>
+    <color name="ta_color_accent_gold">#FFC542</color>
+
+    <!-- ===== Gradients (start / mid / end stops) ===== -->
+    <color name="ta_color_gradient_start">#2F6BFF</color>
+    <color name="ta_color_gradient_mid">#7B3BFF</color>
+    <color name="ta_color_gradient_end">#00E5FF</color>
+    <color name="ta_color_gradient_accent_start">#FF3D8B</color>
+    <color name="ta_color_gradient_accent_end">#FF7A18</color>
+    <color name="ta_color_gradient_surface_start">#1B2340</color>
+    <color name="ta_color_gradient_surface_end">#12162E</color>
+    <color name="ta_color_gradient_hero_start">#1A1F45</color>
+    <color name="ta_color_gradient_hero_mid">#3B1E6E</color>
+    <color name="ta_color_gradient_hero_end">#0C1330</color>
+
+    <!-- ===== Semantic ===== -->
+    <color name="ta_color_success">#22E58A</color>
+    <color name="ta_color_warning">#FFC542</color>
+    <color name="ta_color_error">#FF4D6A</color>
+    <color name="ta_color_info">#4DA6FF</color>
+    <color name="ta_color_live">#FF3B3B</color>
+    <color name="ta_color_neutral">#8C97B8</color>
+    <color name="ta_color_success_soft">#2622E58A</color>
+    <color name="ta_color_warning_soft">#26FFC542</color>
+    <color name="ta_color_error_soft">#26FF4D6A</color>
+    <color name="ta_color_info_soft">#264DA6FF</color>
+
+    <!-- ===== Text ===== -->
+    <color name="ta_color_text_primary">#F2F5FF</color>
+    <color name="ta_color_text_secondary">#A7B1CE</color>
+    <color name="ta_color_text_tertiary">#6E7896</color>
+    <color name="ta_color_text_disabled">#4A5372</color>
+    <color name="ta_color_text_inverse">#05060F</color>
+    <color name="ta_color_text_on_primary">#04131A</color>
+    <color name="ta_color_text_on_accent">#1A0410</color>
+    <color name="ta_color_text_link">#00E5FF</color>
+
+    <!-- ===== Lines, strokes, overlays ===== -->
+    <color name="ta_color_stroke">#2A3454</color>
+    <color name="ta_color_stroke_strong">#3A4568</color>
+    <color name="ta_color_stroke_subtle">#1C2340</color>
+    <color name="ta_color_divider">#1F2740</color>
+    <color name="ta_color_ripple">#33FFFFFF</color>
+    <color name="ta_color_shadow">#99000000</color>
+    <color name="ta_color_overlay">#6604050C</color>
+    <color name="ta_color_transparent">#00000000</color>
+    <color name="ta_color_white_08">#14FFFFFF</color>
+    <color name="ta_color_white_12">#1FFFFFFF</color>
+    <color name="ta_color_white_24">#3DFFFFFF</color>
+    <color name="ta_color_black_40">#66000000</color>
+
+    <!-- ===== Navigation / controls ===== -->
+    <color name="ta_color_nav_background">#0B0E1E</color>
+    <color name="ta_color_nav_item_selected">#00E5FF</color>
+    <color name="ta_color_nav_item_unselected">#6E7896</color>
+    <color name="ta_color_icon_tint">#A7B1CE</color>
+    <color name="ta_color_control_disabled">#38405C</color>
+
+    <!-- ===== Workflow status: Pending / Processing / Completed / Failed / Rejected / Refunded ===== -->
+    <color name="ta_status_pending">#FFC542</color>
+    <color name="ta_status_pending_bg">#26FFC542</color>
+    <color name="ta_status_processing">#4DA6FF</color>
+    <color name="ta_status_processing_bg">#264DA6FF</color>
+    <color name="ta_status_completed">#22E58A</color>
+    <color name="ta_status_completed_bg">#2622E58A</color>
+    <color name="ta_status_failed">#FF4D6A</color>
+    <color name="ta_status_failed_bg">#26FF4D6A</color>
+    <color name="ta_status_rejected">#FF7A18</color>
+    <color name="ta_status_rejected_bg">#26FF7A18</color>
+    <color name="ta_status_refunded">#A78BFA</color>
+    <color name="ta_status_refunded_bg">#26A78BFA</color>
+    <color name="ta_status_live">#FF3B3B</color>
+    <color name="ta_status_live_bg">#26FF3B3B</color>
+    <color name="ta_status_upcoming">#00E5FF</color>
+    <color name="ta_status_upcoming_bg">#2600E5FF</color>
+    <color name="ta_status_neutral">#8C97B8</color>
+    <color name="ta_status_neutral_bg">#268C97B8</color>
+
+    <!-- ===== Auth / decorative glows ===== -->
+    <color name="ta_color_glow_blue">#552F6BFF</color>
+    <color name="ta_color_glow_purple">#557B3BFF</color>
+    <color name="ta_color_glow_cyan">#4400E5FF</color>
+    <color name="ta_color_avatar_bg">#232D4F</color>
+</resources>

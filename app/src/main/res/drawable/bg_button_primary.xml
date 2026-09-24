@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Primary gradient button with ripple; falls back to a flat disabled fill. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/gradient_disabled"/>
+    <item android:drawable="@drawable/ripple_primary"/>
+</selector>

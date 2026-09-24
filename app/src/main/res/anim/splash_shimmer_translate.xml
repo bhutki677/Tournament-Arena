@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Diagonal light band sweeping across the splash background. -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="2200"
+    android:fromXDelta="-10%p" android:toXDelta="160%p"
+    android:interpolator="@android:interpolator/linear"/>

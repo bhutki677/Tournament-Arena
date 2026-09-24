@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tournament Arena - reusable widget + text styles.
+  Layouts should use style="@style/Widget.TA.X" rather than repeating attributes.
+-->
+<resources>
+
+    <!-- ==================== Typography ==================== -->
+    <style name="TextAppearance.TA.Display" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_display</item>
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">@dimen/ta_letter_spacing_wide</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.TA.Headline" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_headline</item>
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.TA.TitleLarge" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_title_large</item>
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.TA.Title" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_title</item>
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.TA.Subtitle" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_subtitle</item>
+        <item name="android:textColor">@color/ta_color_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.TA.Body" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_body</item>
+        <item name="android:textColor">@color/ta_color_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingExtra">@dimen/ta_line_spacing_extra_tight</item>
+    </style>
+
+    <style name="TextAppearance.TA.BodyStrong" parent="TextAppearance.TA.Body">
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.TA.Caption" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_caption</item>
+        <item name="android:textColor">@color/ta_color_text_tertiary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.TA.Overline" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_overline</item>
+        <item name="android:textColor">@color/ta_color_text_tertiary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">@dimen/ta_letter_spacing_wide</item>
+    </style>
+
+    <style name="TextAppearance.TA.Micro" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_micro</item>
+        <item name="android:textColor">@color/ta_color_text_tertiary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.TA.Button" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_button</item>
+        <item name="android:textColor">@color/selector_button_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">@dimen/ta_letter_spacing_medium</item>
+    </style>
+
+    <style name="TextAppearance.TA.Button.Secondary" parent="TextAppearance.TA.Button">
+        <item name="android:textColor">@color/selector_button_text_secondary</item>
+    </style>
+
+    <style name="TextAppearance.TA.Error" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_helper_text_size</item>
+        <item name="android:textColor">@color/ta_color_error</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.TA.Helper" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_helper_text_size</item>
+        <item name="android:textColor">@color/ta_color_text_tertiary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextAppearance.TA.Link" parent="TextAppearance.TA.BodyStrong">
+        <item name="android:textColor">@color/ta_color_text_link</item>
+    </style>
+
+    <style name="TextAppearance.TA.Badge" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_badge_text_size</item>
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">@dimen/ta_letter_spacing_wide</item>
+    </style>
+
+    <!-- ==================== Buttons ==================== -->
+    <style name="Widget.TA.PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">@dimen/ta_button_height</item>
+        <item name="android:minWidth">@dimen/ta_button_min_width</item>
+        <item name="android:paddingLeft">@dimen/ta_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/ta_button_padding_horizontal</item>
+        <item name="android:insetTop">@dimen/ta_elevation_none</item>
+        <item name="android:insetBottom">@dimen/ta_elevation_none</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Button</item>
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:elevation">@dimen/ta_elevation_none</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/ta_button_corner_radius</item>
+    </style>
+
+    <style name="Widget.TA.SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_height">@dimen/ta_button_height</item>
+        <item name="android:minWidth">@dimen/ta_button_min_width</item>
+        <item name="android:paddingLeft">@dimen/ta_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/ta_button_padding_horizontal</item>
+        <item name="android:insetTop">@dimen/ta_elevation_none</item>
+        <item name="android:insetBottom">@dimen/ta_elevation_none</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Button.Secondary</item>
+        <item name="android:background">@drawable/bg_button_secondary</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="strokeWidth">@dimen/ta_elevation_none</item>
+        <item name="cornerRadius">@dimen/ta_button_corner_radius</item>
+    </style>
+
+    <style name="Widget.TA.SmallButton" parent="Widget.TA.SecondaryButton">
+        <item name="android:layout_height">@dimen/ta_button_height_small</item>
+        <item name="android:minWidth">@dimen/ta_elevation_none</item>
+        <item name="android:paddingLeft">@dimen/ta_space_md</item>
+        <item name="android:paddingRight">@dimen/ta_space_md</item>
+    </style>
+
+    <style name="Widget.TA.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">@dimen/ta_elevation_none</item>
+        <item name="android:insetTop">@dimen/ta_elevation_none</item>
+        <item name="android:insetBottom">@dimen/ta_elevation_none</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Link</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="rippleColor">@color/ta_color_ripple</item>
+    </style>
+
+    <style name="Widget.TA.IconButton" parent="">
+        <item name="android:layout_width">@dimen/ta_icon_2xl</item>
+        <item name="android:layout_height">@dimen/ta_icon_2xl</item>
+        <item name="android:background">@drawable/bg_icon_button</item>
+        <item name="android:padding">@dimen/ta_space_sm2</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="tint">@color/selector_icon_tint</item>
+    </style>
+
+    <!-- ==================== Cards ==================== -->
+    <style name="Widget.TA.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/ta_color_surface</item>
+        <item name="cardCornerRadius">@dimen/ta_card_corner_radius</item>
+        <item name="cardElevation">@dimen/ta_elevation_none</item>
+        <item name="strokeColor">@color/ta_color_stroke_subtle</item>
+        <item name="strokeWidth">@dimen/ta_stroke_thin</item>
+        <item name="rippleColor">@color/ta_color_ripple</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="Widget.TA.TournamentCard" parent="Widget.TA.Card">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">@dimen/ta_card_corner_radius</item>
+        <item name="cardBackgroundColor">@color/ta_color_surface</item>
+    </style>
+
+    <style name="Widget.TA.MatchCard" parent="Widget.TA.Card">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/ta_color_surface_elevated</item>
+        <item name="cardCornerRadius">@dimen/ta_card_corner_radius_small</item>
+    </style>
+
+    <style name="Widget.TA.WalletCard" parent="Widget.TA.Card">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/ta_color_surface_elevated</item>
+        <item name="cardCornerRadius">@dimen/ta_radius_xl</item>
+        <item name="strokeWidth">@dimen/ta_stroke_thin</item>
+        <item name="strokeColor">@color/ta_color_stroke</item>
+    </style>
+
+    <style name="Widget.TA.NotificationCard" parent="Widget.TA.Card">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardBackgroundColor">@color/ta_color_surface_glass</item>
+        <item name="cardCornerRadius">@dimen/ta_card_corner_radius_small</item>
+    </style>
+
+    <style name="Widget.TA.GlassCard" parent="Widget.TA.Card">
+        <item name="cardBackgroundColor">@color/ta_color_surface_glass</item>
+        <item name="cardElevation">@dimen/ta_elevation_none</item>
+    </style>
+
+    <!-- ==================== TextInput ==================== -->
+    <style name="Widget.TA.InputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/ta_color_surface</item>
+        <item name="boxStrokeColor">@color/selector_input_stroke</item>
+        <item name="boxStrokeErrorColor">@color/ta_color_error</item>
+        <item name="boxStrokeWidth">@dimen/ta_stroke_thin</item>
+        <item name="boxStrokeWidthFocused">@dimen/ta_stroke_thick</item>
+        <item name="boxCornerRadiusTopStart">@dimen/ta_input_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/ta_input_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/ta_input_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/ta_input_corner_radius</item>
+        <item name="android:textColorHint">@color/ta_color_text_tertiary</item>
+        <item name="hintTextColor">@color/selector_input_hint</item>
+        <item name="errorTextAppearance">@style/TextAppearance.TA.Error</item>
+        <item name="errorIconTint">@color/ta_color_error</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.TA.Helper</item>
+        <item name="endIconTint">@color/selector_icon_tint</item>
+        <item name="startIconTint">@color/ta_color_text_tertiary</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.TA.InputField</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.TA.InputField.Password" parent="Widget.TA.InputField">
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconDrawable">@drawable/ic_eye_show</item>
+        <item name="endIconContentDescription">@string/cd_eye_show</item>
+    </style>
+
+    <style name="Widget.TA.InputField.EditText" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:textSize">@dimen/ta_text_subtitle</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColorHighlight">@color/ta_color_primary_soft</item>
+        <item name="android:paddingLeft">@dimen/ta_input_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/ta_input_padding_horizontal</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <!-- ==================== Bars ==================== -->
+    <style name="Widget.TA.Toolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ta_toolbar_height</item>
+        <item name="android:background">@drawable/bg_toolbar</item>
+        <item name="android:elevation">@dimen/ta_elevation_none</item>
+        <item name="titleTextAppearance">@style/TextAppearance.TA.TitleLarge</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.TA.Caption</item>
+        <item name="titleTextColor">@color/ta_color_text_primary</item>
+        <item name="subtitleTextColor">@color/ta_color_text_tertiary</item>
+        <item name="android:theme">@style/ThemeOverlay.TA.Toolbar</item>
+    </style>
+
+    <style name="Widget.TA.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ta_bottom_nav_height</item>
+        <item name="android:background">@drawable/bg_bottom_nav</item>
+        <item name="itemIconTint">@color/selector_nav_item_tint</item>
+        <item name="itemTextColor">@color/selector_nav_item_tint</item>
+        <item name="itemIconSize">@dimen/ta_bottom_nav_icon_size</item>
+        <item name="itemRippleColor">@color/ta_color_ripple</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="elevation">@dimen/ta_elevation_none</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.TA.NavLabel.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.TA.NavLabel</item>
+    </style>
+
+    <style name="TextAppearance.TA.NavLabel" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_bottom_nav_label_size</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.TA.NavLabel.Active" parent="TextAppearance.TA.NavLabel">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ==================== Structure ==================== -->
+    <style name="Widget.TA.ScreenHeader" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Headline</item>
+        <item name="android:paddingTop">@dimen/ta_space_sm</item>
+        <item name="android:paddingBottom">@dimen/ta_space_2xs</item>
+    </style>
+
+    <style name="Widget.TA.ScreenSubtitle" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Body</item>
+    </style>
+
+    <style name="Widget.TA.SectionTitle" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Title</item>
+        <item name="android:paddingTop">@dimen/ta_space_2xs</item>
+        <item name="android:paddingBottom">@dimen/ta_space_2xs</item>
+    </style>
+
+    <style name="Widget.TA.SectionOverline" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Overline</item>
+    </style>
+
+    <style name="Widget.TA.Divider" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ta_divider_height</item>
+        <item name="android:background">@drawable/divider_section</item>
+    </style>
+
+    <style name="Widget.TA.StatusBadge" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/ta_badge_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/ta_badge_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/ta_badge_padding_horizontal</item>
+        <item name="android:background">@drawable/bg_badge_pending</item>
+        <item name="android:textAppearance">@style/TextAppearance.TA.Badge</item>
+        <item name="android:textColor">@color/ta_status_pending</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Widget.TA.Chip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:layout_height">@dimen/ta_chip_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="chipBackgroundColor">@color/selector_chip_background</item>
+        <item name="android:textColor">@color/selector_chip_text</item>
+        <item name="chipStrokeColor">@color/selector_chip_stroke</item>
+        <item name="chipStrokeWidth">@dimen/ta_stroke_thin</item>
+        <item name="chipCornerRadius">@dimen/ta_radius_pill</item>
+        <item name="android:textSize">@dimen/ta_text_caption</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipMinHeight">@dimen/ta_chip_height</item>
+    </style>
+
+    <style name="Widget.TA.Avatar" parent="">
+        <item name="android:layout_width">@dimen/ta_avatar_size</item>
+        <item name="android:layout_height">@dimen/ta_avatar_size</item>
+        <item name="android:background">@drawable/bg_avatar_circle</item>
+        <item name="android:padding">@dimen/ta_space_xs</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:contentDescription">@string/cd_avatar</item>
+    </style>
+
+    <style name="Widget.TA.ListRow" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/ta_list_item_min_height</item>
+        <item name="android:background">@drawable/bg_row_selectable</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/ta_card_padding</item>
+        <item name="android:paddingRight">@dimen/ta_card_padding</item>
+        <item name="android:paddingTop">@dimen/ta_space_md</item>
+        <item name="android:paddingBottom">@dimen/ta_space_md</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="Widget.TA.ProgressBar" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="android:layout_width">@dimen/ta_progress_size</item>
+        <item name="android:layout_height">@dimen/ta_progress_size</item>
+        <item name="indicatorColor">@color/selector_progress_indicator</item>
+        <item name="trackColor">@color/ta_color_stroke_subtle</item>
+        <item name="trackThickness">@dimen/ta_progress_stroke</item>
+    </style>
+</resources>

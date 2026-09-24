@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Animated splash: arena gradient (from the window background), pulsing glow,
+  diagonal shimmer sweep, crest entrance and a branded progress indicator.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash"
+    android:contentDescription="@string/cd_splash_background">
+
+    <View
+        android:id="@+id/splash_glow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:background="@drawable/bg_splash_glow"/>
+
+    <View
+        android:id="@+id/splash_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@drawable/bg_splash_sweep"/>
+
+    <LinearLayout
+        android:id="@+id/splash_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+        android:paddingRight="@dimen/ta_screen_padding_horizontal">
+
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="@dimen/ta_logo_size"
+            android:layout_height="@dimen/ta_logo_size"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/ic_logo_ta"/>
+
+        <TextView
+            android:id="@+id/splash_app_name"
+            style="@style/TextAppearance.TA.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_xl"
+            android:gravity="center"
+            android:text="@string/app_name_upper"/>
+
+        <TextView
+            android:id="@+id/splash_tagline"
+            style="@style/TextAppearance.TA.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_sm"
+            android:gravity="center"
+            android:text="@string/app_tagline"/>
+
+        <View
+            android:layout_width="@dimen/ta_icon_3xl"
+            android:layout_height="@dimen/ta_divider_height"
+            android:layout_marginTop="@dimen/ta_space_lg"
+            android:background="@drawable/divider_section"/>
+
+        <TextView
+            android:id="@+id/splash_subtitle"
+            style="@style/TextAppearance.TA.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_lg"
+            android:gravity="center"
+            android:text="@string/app_subtitle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/splash_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/ta_space_4xl">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/splash_progress"
+            style="@style/Widget.TA.ProgressBar"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:id="@+id/splash_loading"
+            style="@style/TextAppearance.TA.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:text="@string/splash_loading"/>
+
+        <TextView
+            android:id="@+id/splash_footer_note"
+            style="@style/TextAppearance.TA.Micro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_2xs"
+            android:text="@string/splash_powered_by"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tournament Arena - single dark theme plus overlays.
+  The app is dark-only by design: there is no light theme resource folder.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.TournamentArena" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Brand -->
+        <item name="colorPrimary">@color/ta_color_primary</item>
+        <item name="colorPrimaryVariant">@color/ta_color_primary_dark</item>
+        <item name="colorOnPrimary">@color/ta_color_text_on_primary</item>
+        <item name="colorSecondary">@color/ta_color_tertiary</item>
+        <item name="colorSecondaryVariant">@color/ta_color_tertiary_dark</item>
+        <item name="colorOnSecondary">@color/ta_color_text_primary</item>
+        <item name="colorAccent">@color/ta_color_accent</item>
+        <item name="colorError">@color/ta_color_error</item>
+        <item name="colorOnError">@color/ta_color_text_primary</item>
+
+        <!-- Surfaces -->
+        <item name="android:colorBackground">@color/ta_color_bg_primary</item>
+        <item name="colorSurface">@color/ta_color_surface</item>
+        <item name="colorOnSurface">@color/ta_color_text_primary</item>
+        <item name="colorOnBackground">@color/ta_color_text_primary</item>
+        <item name="android:textColorPrimary">@color/ta_color_text_primary</item>
+        <item name="android:textColorSecondary">@color/ta_color_text_secondary</item>
+        <item name="android:textColorTertiary">@color/ta_color_text_tertiary</item>
+        <item name="android:textColorHint">@color/ta_color_text_tertiary</item>
+        <item name="android:textColorPrimaryInverse">@color/ta_color_text_inverse</item>
+        <item name="colorControlActivated">@color/ta_color_primary</item>
+        <item name="colorControlHighlight">@color/ta_color_ripple</item>
+        <item name="colorControlNormal">@color/ta_color_text_secondary</item>
+
+        <!-- Window -->
+        <item name="android:windowBackground">@drawable/bg_app</item>
+        <item name="android:statusBarColor">@color/ta_color_bg_space</item>
+        <item name="android:navigationBarColor">@color/ta_color_nav_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Default widget styles -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.TA.Dialog.Alert</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.TA.Dialog.BottomSheet</item>
+        <item name="toolbarStyle">@style/Widget.TA.Toolbar</item>
+        <item name="textInputStyle">@style/Widget.TA.InputField</item>
+        <item name="bottomNavigationStyle">@style/Widget.TA.BottomNavigationView</item>
+        <item name="materialButtonStyle">@style/Widget.TA.PrimaryButton</item>
+        <item name="materialCardViewStyle">@style/Widget.TA.Card</item>
+        <item name="chipStyle">@style/Widget.TA.Chip</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Splash theme: full bleed animated background, no action bar, no animations. -->
+    <style name="Theme.TournamentArena.Splash" parent="Theme.TournamentArena">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:statusBarColor">@color/ta_color_transparent</item>
+        <item name="android:navigationBarColor">@color/ta_color_transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDisablePreview">false</item>
+        <item name="android:windowContentTransitions">false</item>
+    </style>
+
+    <!-- Auth host theme: same shell, auth screens own their headers. -->
+    <style name="Theme.TournamentArena.Auth" parent="Theme.TournamentArena">
+        <item name="android:windowBackground">@drawable/bg_app</item>
+    </style>
+
+    <style name="Theme.TournamentArena.Main" parent="Theme.TournamentArena">
+        <item name="android:windowBackground">@color/ta_color_bg_primary</item>
+    </style>
+
+    <!-- ==================== Overlays ==================== -->
+    <style name="ThemeOverlay.TA.Toolbar" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorOnSurface">@color/ta_color_text_primary</item>
+        <item name="colorOnPrimary">@color/ta_color_text_primary</item>
+        <item name="colorPrimary">@color/ta_color_primary</item>
+        <item name="colorControlNormal">@color/ta_color_text_secondary</item>
+        <item name="android:textColorPrimary">@color/ta_color_text_primary</item>
+        <item name="android:textColorSecondary">@color/ta_color_text_secondary</item>
+    </style>
+
+    <style name="ThemeOverlay.TA.InputField" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorPrimary">@color/ta_color_primary</item>
+        <item name="colorOnSurface">@color/ta_color_text_primary</item>
+        <item name="colorError">@color/ta_color_error</item>
+        <item name="android:textColorPrimary">@color/ta_color_text_primary</item>
+        <item name="android:textColorHighlight">@color/ta_color_primary_soft</item>
+        <item name="editTextStyle">@style/Widget.TA.InputField.EditText</item>
+    </style>
+
+    <style name="ThemeOverlay.TA.Dialog.Alert" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/ta_color_primary</item>
+        <item name="colorSecondary">@color/ta_color_tertiary</item>
+        <item name="colorSurface">@color/ta_color_surface_elevated</item>
+        <item name="colorOnSurface">@color/ta_color_text_primary</item>
+        <item name="android:background">@drawable/bg_dialog</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.TA.TextButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.TA.TextButton</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TextAppearance.TA.DialogTitle</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/TextAppearance.TA.DialogBody</item>
+    </style>
+
+    <style name="ThemeOverlay.TA.Dialog.BottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="colorSurface">@color/ta_color_surface_elevated</item>
+        <item name="colorOnSurface">@color/ta_color_text_primary</item>
+        <item name="bottomSheetStyle">@style/Widget.TA.BottomSheet</item>
+        <item name="android:navigationBarColor">@color/ta_color_bg_space</item>
+    </style>
+
+    <style name="ThemeOverlay.TA.BottomNav" parent="">
+        <item name="colorPrimary">@color/ta_color_nav_item_selected</item>
+        <item name="colorOnSurface">@color/ta_color_nav_item_unselected</item>
+        <item name="android:textColorPrimary">@color/ta_color_nav_item_selected</item>
+        <item name="android:textColorSecondary">@color/ta_color_nav_item_unselected</item>
+    </style>
+
+    <style name="ThemeOverlay.TA.Transparent" parent="">
+        <item name="android:windowBackground">@color/ta_color_transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- ==================== Dialog styles ==================== -->
+    <style name="TextAppearance.TA.DialogTitle" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_title_large</item>
+        <item name="android:textColor">@color/ta_color_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.TA.DialogBody" parent="android:TextAppearance">
+        <item name="android:textSize">@dimen/ta_text_body</item>
+        <item name="android:textColor">@color/ta_color_text_secondary</item>
+        <item name="android:lineSpacingExtra">@dimen/ta_line_spacing_extra</item>
+    </style>
+
+    <style name="Widget.TA.BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+        <item name="behavior_peekHeight">@dimen/ta_card_min_height</item>
+    </style>
+</resources>

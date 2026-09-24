@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tournament Arena - design system dimensions.
+  Spacing scale: ta_space_2xs ... ta_space_4xl (4dp step rhythm).
+  Every layout must reference these instead of raw dp values.
+-->
+<resources>
+    <!-- ===== Spacing scale ===== -->
+    <dimen name="ta_space_3xs">2dp</dimen>
+    <dimen name="ta_space_2xs">4dp</dimen>
+    <dimen name="ta_space_xs">6dp</dimen>
+    <dimen name="ta_space_sm">8dp</dimen>
+    <dimen name="ta_space_sm2">10dp</dimen>
+    <dimen name="ta_space_md">12dp</dimen>
+    <dimen name="ta_space_md2">14dp</dimen>
+    <dimen name="ta_space_lg">16dp</dimen>
+    <dimen name="ta_space_lg2">18dp</dimen>
+    <dimen name="ta_space_xl">20dp</dimen>
+    <dimen name="ta_space_xl2">24dp</dimen>
+    <dimen name="ta_space_2xl">28dp</dimen>
+    <dimen name="ta_space_3xl">32dp</dimen>
+    <dimen name="ta_space_4xl">40dp</dimen>
+    <dimen name="ta_space_5xl">48dp</dimen>
+    <dimen name="ta_space_6xl">64dp</dimen>
+
+    <!-- ===== Screen scaffolding ===== -->
+    <dimen name="ta_screen_padding_horizontal">16dp</dimen>
+    <dimen name="ta_screen_padding_vertical">16dp</dimen>
+    <dimen name="ta_screen_padding_bottom">24dp</dimen>
+    <dimen name="ta_section_spacing">20dp</dimen>
+    <dimen name="ta_section_spacing_small">12dp</dimen>
+    <dimen name="ta_list_item_spacing">12dp</dimen>
+    <dimen name="ta_max_content_width">520dp</dimen>
+
+    <!-- ===== Corner radii ===== -->
+    <dimen name="ta_radius_xs">4dp</dimen>
+    <dimen name="ta_radius_sm">8dp</dimen>
+    <dimen name="ta_radius_md">12dp</dimen>
+    <dimen name="ta_radius_lg">16dp</dimen>
+    <dimen name="ta_radius_xl">20dp</dimen>
+    <dimen name="ta_radius_2xl">26dp</dimen>
+    <dimen name="ta_radius_pill">100dp</dimen>
+
+    <!-- ===== Elevation / stroke ===== -->
+    <dimen name="ta_elevation_none">0dp</dimen>
+    <dimen name="ta_elevation_low">2dp</dimen>
+    <dimen name="ta_elevation_medium">4dp</dimen>
+    <dimen name="ta_elevation_high">8dp</dimen>
+    <dimen name="ta_elevation_overlay">12dp</dimen>
+    <dimen name="ta_stroke_thin">1dp</dimen>
+    <dimen name="ta_stroke_medium">1.5dp</dimen>
+    <dimen name="ta_stroke_thick">2dp</dimen>
+
+    <!-- ===== Bars & controls ===== -->
+    <dimen name="ta_status_bar_height">24dp</dimen>
+    <dimen name="ta_toolbar_height">58dp</dimen>
+    <dimen name="ta_toolbar_elevation">6dp</dimen>
+    <dimen name="ta_bottom_nav_height">64dp</dimen>
+    <dimen name="ta_bottom_nav_icon_size">22dp</dimen>
+    <dimen name="ta_bottom_nav_label_size">10sp</dimen>
+    <dimen name="ta_button_height">52dp</dimen>
+    <dimen name="ta_button_height_small">40dp</dimen>
+    <dimen name="ta_button_min_width">120dp</dimen>
+    <dimen name="ta_button_corner_radius">14dp</dimen>
+    <dimen name="ta_button_padding_horizontal">20dp</dimen>
+    <dimen name="ta_input_height">56dp</dimen>
+    <dimen name="ta_input_corner_radius">14dp</dimen>
+    <dimen name="ta_input_padding_horizontal">16dp</dimen>
+    <dimen name="ta_helper_text_size">12sp</dimen>
+    <dimen name="ta_chip_height">30dp</dimen>
+    <dimen name="ta_divider_height">1dp</dimen>
+
+    <!-- ===== Cards ===== -->
+    <dimen name="ta_card_corner_radius">18dp</dimen>
+    <dimen name="ta_card_corner_radius_small">12dp</dimen>
+    <dimen name="ta_card_padding">16dp</dimen>
+    <dimen name="ta_card_padding_small">12dp</dimen>
+    <dimen name="ta_card_elevation">4dp</dimen>
+    <dimen name="ta_card_min_height">96dp</dimen>
+    <dimen name="ta_hero_banner_height">168dp</dimen>
+    <dimen name="ta_stat_tile_height">76dp</dimen>
+    <dimen name="ta_list_item_min_height">72dp</dimen>
+
+    <!-- ===== Icons, badges, avatars ===== -->
+    <dimen name="ta_icon_xs">12dp</dimen>
+    <dimen name="ta_icon_sm">16dp</dimen>
+    <dimen name="ta_icon_md">20dp</dimen>
+    <dimen name="ta_icon_lg">24dp</dimen>
+    <dimen name="ta_icon_xl">32dp</dimen>
+    <dimen name="ta_icon_2xl">44dp</dimen>
+    <dimen name="ta_icon_3xl">64dp</dimen>
+    <dimen name="ta_logo_size">112dp</dimen>
+    <dimen name="ta_logo_size_small">40dp</dimen>
+    <dimen name="ta_avatar_size">40dp</dimen>
+    <dimen name="ta_avatar_size_small">32dp</dimen>
+    <dimen name="ta_avatar_size_large">72dp</dimen>
+    <dimen name="ta_avatar_border">2dp</dimen>
+    <dimen name="ta_badge_height">24dp</dimen>
+    <dimen name="ta_badge_padding_horizontal">10dp</dimen>
+    <dimen name="ta_badge_corner_radius">8dp</dimen>
+    <dimen name="ta_badge_text_size">11sp</dimen>
+    <dimen name="ta_badge_dot_size">8dp</dimen>
+    <dimen name="ta_illustration_size">140dp</dimen>
+    <dimen name="ta_progress_size">28dp</dimen>
+    <dimen name="ta_progress_stroke">3dp</dimen>
+    <dimen name="ta_state_view_padding">32dp</dimen>
+
+    <!-- ===== Typography ===== -->
+    <dimen name="ta_text_display">30sp</dimen>
+    <dimen name="ta_text_headline">24sp</dimen>
+    <dimen name="ta_text_title_large">20sp</dimen>
+    <dimen name="ta_text_title">18sp</dimen>
+    <dimen name="ta_text_subtitle">16sp</dimen>
+    <dimen name="ta_text_body">14sp</dimen>
+    <dimen name="ta_text_body_small">13sp</dimen>
+    <dimen name="ta_text_caption">12sp</dimen>
+    <dimen name="ta_text_overline">11sp</dimen>
+    <dimen name="ta_text_micro">10sp</dimen>
+    <dimen name="ta_text_button">15sp</dimen>
+    <dimen name="ta_line_spacing_extra_tight">2dp</dimen>
+    <dimen name="ta_line_spacing_extra">4dp</dimen>
+    <dimen name="ta_letter_spacing_wide">0.08</dimen>
+    <dimen name="ta_letter_spacing_medium">0.04</dimen>
+</resources>

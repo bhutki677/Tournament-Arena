@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reusable settings / menu row: icon + title + subtitle + chevron. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_root"
+    style="@style/Widget.TA.ListRow">
+
+    <ImageView
+        android:id="@+id/row_icon"
+        android:layout_width="@dimen/ta_icon_lg"
+        android:layout_height="@dimen/ta_icon_lg"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/cd_section_icon"
+        android:src="@drawable/ic_settings"
+        app:tint="@color/ta_color_primary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/ta_space_md"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/row_title"
+            style="@style/TextAppearance.TA.BodyStrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/profile_settings"/>
+
+        <TextView
+            android:id="@+id/row_subtitle"
+            style="@style/TextAppearance.TA.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/profile_settings_sub"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/row_chevron"
+        android:layout_width="@dimen/ta_icon_lg"
+        android:layout_height="@dimen/ta_icon_lg"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/cd_row_arrow"
+        android:src="@drawable/ic_chevron_right"
+        app:tint="@color/ta_color_text_tertiary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+</LinearLayout>

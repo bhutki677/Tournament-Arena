@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tournament Arena crest - ORIGINAL artwork.
+  A layered arena shield with bracket chevrons and a champion star.
+  Contains no third party brand assets and implies no affiliation.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="96dp" android:height="96dp"
+    android:viewportWidth="64" android:viewportHeight="64">
+    <path android:pathData="M32,3L57,12.5V32C57,45.6 46.6,55.7 32,61C17.4,55.7 7,45.6 7,32V12.5Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="7" android:startY="3" android:endX="57" android:endY="61">
+                <item android:offset="0" android:color="@color/ta_color_gradient_start"/>
+                <item android:offset="0.55" android:color="@color/ta_color_gradient_mid"/>
+                <item android:offset="1" android:color="@color/ta_color_gradient_end"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M32,8.4L52,17V31.5C52,42.4 43.9,50.9 32,55.9C20.1,50.9 12,42.4 12,31.5V17Z"
+        android:fillColor="@color/ta_color_bg_space" android:fillAlpha="0.72"/>
+    <path android:pathData="M32,12L34.8,17.8H41.2L36.4,21.6L38.3,27.4L32,24L25.7,27.4L27.6,21.6L22.8,17.8H29.2Z"
+        android:fillColor="@color/ta_color_accent_gold"/>
+    <path android:pathData="M18.5,31.5L32,40.4L45.5,31.5V36.6L32,45.5L18.5,36.6Z"
+        android:fillColor="@color/ta_color_primary"/>
+    <path android:pathData="M18.5,41.5L32,50.4L45.5,41.5V46.6L32,55.5L18.5,46.6Z"
+        android:fillColor="@color/ta_color_accent"/>
+</vector>

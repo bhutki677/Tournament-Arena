@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hero banner used by Home and Tournament Details headers. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/ta_radius_xl"/>
+    <gradient
+        android:angle="315"
+        android:startColor="@color/ta_color_gradient_hero_mid"
+        android:centerColor="@color/ta_color_gradient_hero_start"
+        android:endColor="@color/ta_color_gradient_hero_end"
+        android:type="linear"/>
+    <stroke android:width="@dimen/ta_stroke_thin" android:color="@color/ta_color_stroke"/>
+</shape>

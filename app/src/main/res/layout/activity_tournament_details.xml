@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tournament details screen scaffold (body is filled in phase 1D). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/details_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <LinearLayout
+        android:id="@+id/details_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/details_toolbar"
+            style="@style/Widget.TA.Toolbar"
+            android:title="@string/title_tournament_details"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationContentDescription="@string/cd_back"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/ta_screen_padding_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+                android:paddingRight="@dimen/ta_screen_padding_horizontal"
+                android:paddingTop="@dimen/ta_screen_padding_vertical">
+
+                <LinearLayout
+                    android:id="@+id/details_hero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_hero_banner"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ta_card_padding">
+
+                    <ImageView
+                        android:layout_width="@dimen/ta_logo_size_small"
+                        android:layout_height="@dimen/ta_logo_size_small"
+                        android:contentDescription="@string/cd_logo"
+                        android:src="@drawable/ic_logo_ta_mono"/>
+
+                    <TextView
+                        android:id="@+id/details_title"
+                        style="@style/TextAppearance.TA.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ta_space_md"
+                        android:text="@string/title_tournament_details"/>
+
+                    <TextView
+                        android:id="@+id/details_subtitle"
+                        style="@style/TextAppearance.TA.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ta_space_2xs"
+                        android:text="@string/label_mock_notice"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Widget.TA.SectionTitle"
+                    android:layout_marginTop="@dimen/ta_section_spacing"
+                    android:text="@string/section_tournament_info"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/details_info_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"/>
+
+                <TextView
+                    style="@style/Widget.TA.SectionTitle"
+                    android:layout_marginTop="@dimen/ta_section_spacing"
+                    android:text="@string/section_prize_breakdown"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/details_prize_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"/>
+
+                <TextView
+                    style="@style/Widget.TA.SectionTitle"
+                    android:layout_marginTop="@dimen/ta_section_spacing"
+                    android:text="@string/section_rules"/>
+
+                <TextView
+                    android:id="@+id/details_rules"
+                    style="@style/TextAppearance.TA.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_space_sm"
+                    android:text="@string/label_mock_notice"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+            android:paddingRight="@dimen/ta_screen_padding_horizontal"
+            android:paddingTop="@dimen/ta_space_md"
+            android:paddingBottom="@dimen/ta_space_lg">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/details_primary_action"
+                style="@style/Widget.TA.PrimaryButton"
+                android:layout_width="match_parent"
+                android:text="@string/action_join_now"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/details_loading"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/details_empty"
+        layout="@layout/view_empty_state"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/details_error"
+        layout="@layout/view_error_state"
+        android:visibility="gone"/>
+</FrameLayout>

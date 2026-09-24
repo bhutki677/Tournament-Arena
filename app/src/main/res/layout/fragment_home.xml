@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home shell: header, hero banner, live row, featured list, quick actions. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/home_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/home_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+            android:paddingRight="@dimen/ta_screen_padding_horizontal"
+            android:paddingTop="@dimen/ta_screen_padding_vertical"
+            android:paddingBottom="@dimen/ta_screen_padding_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/home_header"
+                    layout="@layout/view_screen_header"/>
+
+                <LinearLayout
+                    android:id="@+id/home_hero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_hero_banner"
+                    android:orientation="vertical"
+                    android:padding="@dimen/ta_card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/ta_logo_size_small"
+                            android:layout_height="@dimen/ta_logo_size_small"
+                            android:contentDescription="@string/cd_logo"
+                            android:src="@drawable/ic_logo_ta_mono"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/ta_space_md"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextAppearance.TA.Overline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/section_featured"/>
+
+                            <TextView
+                                android:id="@+id/home_hero_title"
+                                style="@style/TextAppearance.TA.Title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text="@string/app_name_upper"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/home_hero_body"
+                        style="@style/TextAppearance.TA.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ta_space_md"
+                        android:text="@string/app_subtitle"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/home_hero_action"
+                        style="@style/Widget.TA.PrimaryButton"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="@dimen/ta_space_lg"
+                        android:text="@string/action_register_now"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_section_spacing"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Widget.TA.SectionTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/section_live_now"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/home_live_see_all"
+                        style="@style/Widget.TA.TextButton"
+                        android:text="@string/action_see_all"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_live_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"/>
+
+                <TextView
+                    style="@style/Widget.TA.SectionTitle"
+                    android:layout_marginTop="@dimen/ta_section_spacing"
+                    android:text="@string/section_featured"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/home_featured_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"/>
+
+                <TextView
+                    style="@style/Widget.TA.SectionTitle"
+                    android:layout_marginTop="@dimen/ta_section_spacing"
+                    android:text="@string/section_quick_actions"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_space_sm"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/home_quick_tournaments"
+                        style="@style/Widget.TA.ListRow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ta_icon_2xl"
+                            android:layout_height="@dimen/ta_icon_2xl"
+                            android:background="@drawable/bg_icon_circle"
+                            android:contentDescription="@string/cd_section_icon"
+                            android:padding="@dimen/ta_space_sm2"
+                            android:src="@drawable/ic_trophy"
+                            app:tint="@color/ta_color_primary"/>
+
+                        <TextView
+                            android:id="@+id/home_quick_tournaments_label"
+                            style="@style/TextAppearance.TA.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ta_space_sm"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/nav_tournaments"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_quick_matches"
+                        style="@style/Widget.TA.ListRow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ta_icon_2xl"
+                            android:layout_height="@dimen/ta_icon_2xl"
+                            android:background="@drawable/bg_icon_circle"
+                            android:contentDescription="@string/cd_section_icon"
+                            android:padding="@dimen/ta_space_sm2"
+                            android:src="@drawable/ic_matches"
+                            app:tint="@color/ta_color_primary"/>
+
+                        <TextView
+                            android:id="@+id/home_quick_matches_label"
+                            style="@style/TextAppearance.TA.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ta_space_sm"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/nav_matches"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_quick_wallet"
+                        style="@style/Widget.TA.ListRow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ta_icon_2xl"
+                            android:layout_height="@dimen/ta_icon_2xl"
+                            android:background="@drawable/bg_icon_circle"
+                            android:contentDescription="@string/cd_section_icon"
+                            android:padding="@dimen/ta_space_sm2"
+                            android:src="@drawable/ic_wallet"
+                            app:tint="@color/ta_color_primary"/>
+
+                        <TextView
+                            android:id="@+id/home_quick_wallet_label"
+                            style="@style/TextAppearance.TA.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ta_space_sm"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/nav_wallet"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_quick_notifications"
+                        style="@style/Widget.TA.ListRow"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/ta_icon_2xl"
+                            android:layout_height="@dimen/ta_icon_2xl"
+                            android:background="@drawable/bg_icon_circle"
+                            android:contentDescription="@string/cd_section_icon"
+                            android:padding="@dimen/ta_space_sm2"
+                            android:src="@drawable/ic_bell"
+                            app:tint="@color/ta_color_primary"/>
+
+                        <TextView
+                            android:id="@+id/home_quick_notifications_label"
+                            style="@style/TextAppearance.TA.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/ta_space_sm"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/cd_notifications"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextAppearance.TA.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ta_space_xl"
+                    android:text="@string/label_mock_notice"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/home_loading"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/home_empty"
+        layout="@layout/view_empty_state"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/home_error"
+        layout="@layout/view_error_state"
+        android:visibility="gone"/>
+</FrameLayout>

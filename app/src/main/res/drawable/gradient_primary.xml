@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/ta_button_corner_radius"/>
+    <gradient
+        android:angle="0"
+        android:startColor="@color/ta_color_gradient_start"
+        android:centerColor="@color/ta_color_gradient_mid"
+        android:endColor="@color/ta_color_gradient_end"
+        android:type="linear"/>
+</shape>

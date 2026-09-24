@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Frosted card: translucent surface with a light top edge. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/ta_color_surface_glass"/>
+            <corners android:radius="@dimen/ta_card_corner_radius"/>
+            <stroke android:width="@dimen/ta_stroke_thin" android:color="@color/ta_color_white_12"/>
+        </shape>
+    </item>
+    <item android:gravity="top" android:height="@dimen/ta_stroke_thin">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/ta_color_white_24"/>
+        </shape>
+    </item>
+</layer-list>

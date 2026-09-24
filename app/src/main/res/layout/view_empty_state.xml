@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared empty state: illustration + title + message + optional action. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/ta_state_view_padding">
+
+    <ImageView
+        android:id="@+id/empty_illustration"
+        android:layout_width="@dimen/ta_illustration_size"
+        android:layout_height="@dimen/ta_illustration_size"
+        android:contentDescription="@string/cd_empty_illustration"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_illustration_empty"
+        app:tint="@color/ta_color_text_tertiary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+    <TextView
+        android:id="@+id/empty_title"
+        style="@style/TextAppearance.TA.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_lg"
+        android:gravity="center"
+        android:text="@string/state_empty_title"/>
+
+    <TextView
+        android:id="@+id/empty_message"
+        style="@style/TextAppearance.TA.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_sm"
+        android:gravity="center"
+        android:text="@string/state_empty_message"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/empty_action"
+        style="@style/Widget.TA.SmallButton"
+        android:layout_marginTop="@dimen/ta_space_lg"
+        android:text="@string/action_refresh"
+        android:visibility="gone"/>
+</LinearLayout>

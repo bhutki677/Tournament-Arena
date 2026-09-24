@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Confirmation dialog body reused by ConfirmationDialog in phase 1B. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:padding="@dimen/ta_space_xl">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/TextAppearance.TA.DialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_logout_confirm_title"/>
+
+    <TextView
+        android:id="@+id/dialog_message"
+        style="@style/TextAppearance.TA.DialogBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_sm"
+        android:text="@string/profile_logout_confirm_message"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_xl"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_cancel"
+            style="@style/Widget.TA.TextButton"
+            android:text="@string/action_cancel"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_confirm"
+            style="@style/Widget.TA.PrimaryButton"
+            android:layout_marginStart="@dimen/ta_space_sm"
+            android:text="@string/action_confirm"/>
+    </LinearLayout>
+</LinearLayout>

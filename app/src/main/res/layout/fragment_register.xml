@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Register scaffold: phase 1C adds validation and error states. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/register_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+    android:paddingRight="@dimen/ta_screen_padding_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/ta_space_4xl"
+        android:paddingBottom="@dimen/ta_screen_padding_bottom">
+
+        <ImageView
+            android:layout_width="@dimen/ta_icon_3xl"
+            android:layout_height="@dimen/ta_icon_3xl"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/ic_logo_ta"/>
+
+        <TextView
+            android:id="@+id/register_title"
+            style="@style/TextAppearance.TA.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_lg"
+            android:gravity="center"
+            android:text="@string/auth_register_title"/>
+
+        <TextView
+            android:id="@+id/register_subtitle"
+            style="@style/TextAppearance.TA.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_2xs"
+            android:gravity="center"
+            android:text="@string/auth_register_subtitle"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/register_name_field"
+            style="@style/Widget.TA.InputField"
+            android:layout_marginTop="@dimen/ta_space_3xl"
+            android:hint="@string/label_full_name"
+            app:startIconDrawable="@drawable/ic_profile">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_name_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:hint="@string/hint_full_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/register_email_field"
+            style="@style/Widget.TA.InputField"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:hint="@string/label_email"
+            app:startIconDrawable="@drawable/ic_mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_email_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:hint="@string/hint_email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/register_phone_field"
+            style="@style/Widget.TA.InputField"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:hint="@string/label_phone"
+            app:startIconDrawable="@drawable/ic_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_phone_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:hint="@string/hint_phone"
+                android:importantForAutofill="no"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/register_password_field"
+            style="@style/Widget.TA.InputField.Password"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:hint="@string/label_password"
+            app:helperText="@string/helper_password"
+            app:startIconDrawable="@drawable/ic_lock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_password_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:hint="@string/hint_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/register_confirm_password_field"
+            style="@style/Widget.TA.InputField.Password"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:hint="@string/label_confirm_password"
+            app:startIconDrawable="@drawable/ic_shield">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_confirm_password_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:hint="@string/hint_confirm_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_submit_button"
+            style="@style/Widget.TA.PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/ta_space_xl"
+            android:text="@string/action_sign_up"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_lg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.TA.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auth_have_account_prompt"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_login_button"
+                style="@style/Widget.TA.TextButton"
+                android:layout_marginStart="@dimen/ta_space_2xs"
+                android:text="@string/auth_login_link"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/register_terms"
+            style="@style/TextAppearance.TA.Micro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_xl"
+            android:gravity="center"
+            android:text="@string/auth_terms_prefix"/>
+    </LinearLayout>
+</ScrollView>

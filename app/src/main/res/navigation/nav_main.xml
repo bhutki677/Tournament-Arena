@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Main shell graph. Destination ids nav_home / nav_tournaments / nav_matches /
+  nav_wallet / nav_profile match the ids in res/menu/bottom_nav_menu.xml so
+  NavigationUI can drive the BottomNavigationView without extra wiring.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.vk.tournamentapp.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/nav_tournaments"
+        android:name="com.vk.tournamentapp.fragments.TournamentsFragment"
+        android:label="@string/title_tournaments"
+        tools:layout="@layout/fragment_tournaments"/>
+
+    <fragment
+        android:id="@+id/nav_matches"
+        android:name="com.vk.tournamentapp.fragments.MyMatchesFragment"
+        android:label="@string/title_matches"
+        tools:layout="@layout/fragment_matches"/>
+
+    <fragment
+        android:id="@+id/nav_wallet"
+        android:name="com.vk.tournamentapp.fragments.WalletFragment"
+        android:label="@string/title_wallet"
+        tools:layout="@layout/fragment_wallet"/>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.vk.tournamentapp.fragments.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>

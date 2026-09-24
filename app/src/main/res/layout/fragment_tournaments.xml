@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tournaments shell: header, search field, filter chips, list. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tournaments_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tournaments_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+        android:paddingRight="@dimen/ta_screen_padding_horizontal"
+        android:paddingTop="@dimen/ta_screen_padding_vertical">
+
+        <include
+            android:id="@+id/tournaments_header"
+            layout="@layout/view_screen_header"/>
+
+        <LinearLayout
+            android:id="@+id/tournaments_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ta_button_height"
+            android:background="@drawable/bg_search_field"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/ta_input_padding_horizontal"
+            android:paddingRight="@dimen/ta_input_padding_horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/ta_icon_md"
+                android:layout_height="@dimen/ta_icon_md"
+                android:contentDescription="@string/cd_search"
+                android:src="@drawable/ic_search"
+                app:tint="@color/ta_color_text_tertiary"/>
+
+            <EditText
+                android:id="@+id/tournaments_search_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/ta_space_sm"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/label_search_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingLeft="@dimen/ta_space_2xs"
+                android:textColorHint="@color/ta_color_text_tertiary"/>
+
+            <ImageView
+                android:id="@+id/tournaments_filter_button"
+                android:layout_width="@dimen/ta_icon_lg"
+                android:layout_height="@dimen/ta_icon_lg"
+                android:contentDescription="@string/cd_filter"
+                android:src="@drawable/ic_filter"
+                app:tint="@color/ta_color_primary"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/tournaments_chip_all"
+                    style="@style/Widget.TA.Chip"
+                    android:checked="true"
+                    android:text="@string/label_filter_all"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/tournaments_chip_live"
+                    style="@style/Widget.TA.Chip"
+                    android:layout_marginStart="@dimen/ta_space_sm"
+                    android:text="@string/status_live"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/tournaments_chip_upcoming"
+                    style="@style/Widget.TA.Chip"
+                    android:layout_marginStart="@dimen/ta_space_sm"
+                    android:text="@string/status_upcoming"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/tournaments_chip_completed"
+                    style="@style/Widget.TA.Chip"
+                    android:layout_marginStart="@dimen/ta_space_sm"
+                    android:text="@string/status_completed"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tournaments_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/ta_screen_padding_bottom"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/tournaments_loading"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/tournaments_empty"
+        layout="@layout/view_empty_state"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/tournaments_error"
+        layout="@layout/view_error_state"
+        android:visibility="gone"/>
+</FrameLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notifications screen scaffold (list items arrive in phase 1E). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notifications_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <LinearLayout
+        android:id="@+id/notifications_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/notifications_toolbar"
+            style="@style/Widget.TA.Toolbar"
+            android:title="@string/title_notifications"
+            app:menu="@menu/menu_notifications"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationContentDescription="@string/cd_back"/>
+
+        <TextView
+            android:id="@+id/notifications_section_title"
+            style="@style/Widget.TA.SectionOverline"
+            android:layout_marginStart="@dimen/ta_screen_padding_horizontal"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:text="@string/section_recent_notifications"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notifications_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+            android:paddingRight="@dimen/ta_screen_padding_horizontal"
+            android:paddingBottom="@dimen/ta_screen_padding_bottom"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/notifications_loading"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/notifications_empty"
+        layout="@layout/view_empty_state"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/notifications_error"
+        layout="@layout/view_error_state"
+        android:visibility="gone"/>
+</FrameLayout>

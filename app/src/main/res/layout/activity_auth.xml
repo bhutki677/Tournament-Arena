@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auth host: a single NavHostFragment renders login / register / reset / OTP. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/auth_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app">
+
+    <View
+        android:id="@+id/auth_decor_glow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ta_hero_banner_height"
+        android:layout_gravity="top"
+        android:alpha="0.35"
+        android:background="@drawable/bg_splash_glow"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/auth_nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_auth"/>
+</FrameLayout>

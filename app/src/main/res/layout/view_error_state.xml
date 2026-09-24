@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared error state: illustration + title + message + retry. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/error_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/ta_state_view_padding">
+
+    <ImageView
+        android:id="@+id/error_illustration"
+        android:layout_width="@dimen/ta_illustration_size"
+        android:layout_height="@dimen/ta_illustration_size"
+        android:contentDescription="@string/cd_error_illustration"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_illustration_error"/>
+
+    <TextView
+        android:id="@+id/error_title"
+        style="@style/TextAppearance.TA.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_lg"
+        android:gravity="center"
+        android:text="@string/state_error_title"/>
+
+    <TextView
+        android:id="@+id/error_message"
+        style="@style/TextAppearance.TA.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_sm"
+        android:gravity="center"
+        android:text="@string/state_error_message"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/error_retry_button"
+        style="@style/Widget.TA.PrimaryButton"
+        android:layout_marginTop="@dimen/ta_space_lg"
+        android:text="@string/action_retry"
+        app:icon="@drawable/ic_refresh"
+        app:iconGravity="textStart"
+        app:iconTint="@color/ta_color_text_on_primary"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+</LinearLayout>

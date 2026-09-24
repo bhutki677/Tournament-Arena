@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Adaptive icon foreground: the Tournament Arena crest inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:pathData="M54,23L79,32.6V53.4C79,67.2 68.3,77.4 54,82.7C39.7,77.4 29,67.2 29,53.4V32.6Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear"
+                android:startX="29" android:startY="23" android:endX="79" android:endY="82">
+                <item android:offset="0" android:color="@color/ta_color_gradient_start"/>
+                <item android:offset="0.55" android:color="@color/ta_color_gradient_mid"/>
+                <item android:offset="1" android:color="@color/ta_color_gradient_end"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M54,28.6L73,36.8V52.6C73,63 65.4,71.3 54,76C42.6,71.3 35,63 35,52.6V36.8Z"
+        android:fillColor="@color/ta_color_bg_space" android:fillAlpha="0.75"/>
+    <path android:pathData="M54,32L56.6,37.4H62.6L58,41L59.8,46.4L54,43.2L48.2,46.4L50,41L45.4,37.4H51.4Z"
+        android:fillColor="@color/ta_color_accent_gold"/>
+    <path android:pathData="M41.5,52.5L54,60.8L66.5,52.5V57.3L54,65.6L41.5,57.3Z"
+        android:fillColor="@color/ta_color_primary"/>
+    <path android:pathData="M41.5,62L54,70.3L66.5,62V66.8L54,75.1L41.5,66.8Z"
+        android:fillColor="@color/ta_color_accent"/>
+</vector>

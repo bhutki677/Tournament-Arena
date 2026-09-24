@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Outlined secondary button. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/ta_color_transparent"/>
+            <corners android:radius="@dimen/ta_button_corner_radius"/>
+            <stroke android:width="@dimen/ta_stroke_thin" android:color="@color/ta_color_control_disabled"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/ta_color_primary_soft"/>
+            <corners android:radius="@dimen/ta_button_corner_radius"/>
+            <stroke android:width="@dimen/ta_stroke_thin" android:color="@color/ta_color_primary"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/ta_color_transparent"/>
+            <corners android:radius="@dimen/ta_button_corner_radius"/>
+            <stroke android:width="@dimen/ta_stroke_thin" android:color="@color/ta_color_stroke_strong"/>
+        </shape>
+    </item>
+</selector>

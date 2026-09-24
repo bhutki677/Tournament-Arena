@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- My Matches shell: header, status chips, joined and completed lists. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matches_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/matches_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+        android:paddingRight="@dimen/ta_screen_padding_horizontal"
+        android:paddingTop="@dimen/ta_screen_padding_vertical"
+        android:paddingBottom="@dimen/ta_screen_padding_bottom">
+
+        <LinearLayout
+            android:id="@+id/matches_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/matches_header"
+                layout="@layout/view_screen_header"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/matches_chip_joined"
+                    style="@style/Widget.TA.Chip"
+                    android:checked="true"
+                    android:text="@string/status_joined"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/matches_chip_completed"
+                    style="@style/Widget.TA.Chip"
+                    android:layout_marginStart="@dimen/ta_space_sm"
+                    android:text="@string/status_completed"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/Widget.TA.SectionTitle"
+                android:layout_marginTop="@dimen/ta_section_spacing"
+                android:text="@string/section_joined_matches"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matches_joined_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"/>
+
+            <TextView
+                style="@style/Widget.TA.SectionTitle"
+                android:layout_marginTop="@dimen/ta_section_spacing"
+                android:text="@string/section_completed_matches"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matches_completed_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"/>
+
+            <TextView
+                style="@style/TextAppearance.TA.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ta_space_xl"
+                android:text="@string/label_mock_notice"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/matches_loading"
+        layout="@layout/view_loading"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/matches_empty"
+        layout="@layout/view_empty_state"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/matches_error"
+        layout="@layout/view_error_state"
+        android:visibility="gone"/>
+</FrameLayout>

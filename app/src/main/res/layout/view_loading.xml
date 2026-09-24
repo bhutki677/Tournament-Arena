@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared loading state. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/ta_state_view_padding"
+    android:clickable="true"
+    android:focusable="true">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loading_indicator"
+        style="@style/Widget.TA.ProgressBar"
+        android:contentDescription="@string/cd_loading"
+        app:indeterminate="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+    <TextView
+        android:id="@+id/loading_message"
+        style="@style/TextAppearance.TA.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ta_space_lg"
+        android:gravity="center"
+        android:text="@string/state_loading"/>
+</LinearLayout>

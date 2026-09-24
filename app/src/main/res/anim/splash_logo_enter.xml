@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Crest entrance: fade + scale up with a slight overshoot. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/overshoot" android:fillAfter="true">
+    <alpha android:duration="700" android:fromAlpha="0.0" android:toAlpha="1.0"/>
+    <scale android:duration="700" android:fromXScale="0.72" android:toXScale="1.0"
+        android:fromYScale="0.72" android:toYScale="1.0"
+        android:pivotX="50%" android:pivotY="50%"/>
+</set>

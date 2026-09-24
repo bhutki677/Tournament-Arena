@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- OTP scaffold: phase 1C adds the real verification flow. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/otp_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingLeft="@dimen/ta_screen_padding_horizontal"
+    android:paddingRight="@dimen/ta_screen_padding_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/ta_space_4xl"
+        android:paddingBottom="@dimen/ta_screen_padding_bottom">
+
+        <ImageView
+            android:layout_width="@dimen/ta_icon_3xl"
+            android:layout_height="@dimen/ta_icon_3xl"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/ic_shield"/>
+
+        <TextView
+            android:id="@+id/otp_title"
+            style="@style/TextAppearance.TA.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_lg"
+            android:gravity="center"
+            android:text="@string/auth_otp_title"/>
+
+        <TextView
+            android:id="@+id/otp_subtitle"
+            style="@style/TextAppearance.TA.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_2xs"
+            android:gravity="center"
+            android:text="@string/auth_otp_subtitle"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/otp_code_field"
+            style="@style/Widget.TA.InputField"
+            android:layout_marginTop="@dimen/ta_space_3xl"
+            android:hint="@string/label_otp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_code_input"
+                style="@style/Widget.TA.InputField.EditText"
+                android:gravity="center"
+                android:hint="@string/hint_otp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="6"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/otp_resend_timer"
+            style="@style/TextAppearance.TA.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:gravity="center"
+            android:text="@string/auth_otp_resend"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_submit_button"
+            style="@style/Widget.TA.PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/ta_space_lg"
+            android:text="@string/action_verify"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/otp_resend_button"
+            style="@style/Widget.TA.TextButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ta_space_md"
+            android:text="@string/auth_otp_resend"/>
+
+        <TextView
+            style="@style/TextAppearance.TA.Micro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ta_space_xl"
+            android:gravity="center"
+            android:text="@string/auth_otp_demo_hint"/>
+    </LinearLayout>
+</ScrollView>

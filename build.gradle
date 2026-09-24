@@ -1,0 +1,5 @@
+// Tournament Arena - root build file.
+// All plugins are declared here and applied in the module build files.
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
+}

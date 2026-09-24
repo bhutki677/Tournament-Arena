@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Error state illustration: a broken signal inside a hexagon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp" android:height="120dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <path android:strokeColor="@color/ta_color_error" android:strokeWidth="1.2"
+        android:fillColor="@color/ta_color_error_soft" android:strokeLineJoin="round"
+        android:pathData="M12,2.6L20.6,7.6V16.4L12,21.4L3.4,16.4V7.6Z"/>
+    <path android:strokeColor="@color/ta_color_error" android:strokeWidth="1.4"
+        android:fillColor="@color/ta_color_transparent" android:strokeLineCap="round"
+        android:pathData="M12,8.4V13.4"/>
+    <path android:fillColor="@color/ta_color_error"
+        android:pathData="M11.3,15.4A0.7,0.7 0 0,1 12.7,15.4A0.7,0.7 0 0,1 11.3,15.4Z"/>
+</vector>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Wallet balance card: brand gradient with a soft highlight band. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/ta_radius_xl"/>
+            <gradient
+                android:angle="315"
+                android:startColor="@color/ta_color_gradient_start"
+                android:centerColor="@color/ta_color_gradient_mid"
+                android:endColor="@color/ta_color_gradient_end"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item android:gravity="top|right">
+        <shape android:shape="oval">
+            <size android:width="@dimen/ta_icon_3xl" android:height="@dimen/ta_icon_3xl"/>
+            <solid android:color="@color/ta_color_white_12"/>
+        </shape>
+    </item>
+</layer-list>

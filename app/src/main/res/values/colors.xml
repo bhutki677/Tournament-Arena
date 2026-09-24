@@ -112,4 +112,9 @@
     <color name="ta_color_glow_purple">#557B3BFF</color>
     <color name="ta_color_glow_cyan">#4400E5FF</color>
     <color name="ta_color_avatar_bg">#232D4F</color>
+    <!-- Joined / slots full badge colours -->
+    <color name="ta_status_joined">#35D0FF</color>
+    <color name="ta_status_joined_bg">#3D35D0FF</color>
+    <color name="ta_status_full">#FF8A3D</color>
+    <color name="ta_status_full_bg">#3DFF8A3D</color>
 </resources>

@@ -49,8 +49,10 @@ public class ProfileFragment extends Fragment {
         binding.profileVersion.setText(getString(R.string.app_version_format,
                 BuildConfig.VERSION_NAME));
 
-        stateController = new StateController(binding.profileScroll, binding.profileLoading,
-                binding.profileEmpty, binding.profileError, binding.profileEmpty.emptyTitle,
+        stateController = new StateController(binding.profileScroll,
+                binding.profileLoading.getRoot(),
+                binding.profileEmpty.getRoot(), binding.profileError.getRoot(),
+                binding.profileEmpty.emptyTitle,
                 binding.profileEmpty.emptyMessage, binding.profileError.errorMessage);
         binding.profileError.errorRetryButton.setOnClickListener(v -> bindProfile());
 

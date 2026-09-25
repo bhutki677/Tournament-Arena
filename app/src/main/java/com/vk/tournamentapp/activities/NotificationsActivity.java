@@ -33,8 +33,8 @@ public class NotificationsActivity extends AppCompatActivity {
         binding.notificationsList.setHasFixedSize(true);
 
         stateController = new StateController(binding.notificationsContent,
-                binding.notificationsLoading, binding.notificationsEmpty,
-                binding.notificationsError, binding.notificationsEmpty.emptyTitle,
+                binding.notificationsLoading.getRoot(), binding.notificationsEmpty.getRoot(),
+                binding.notificationsError.getRoot(), binding.notificationsEmpty.emptyTitle,
                 binding.notificationsEmpty.emptyMessage, binding.notificationsError.errorMessage);
 
         binding.notificationsToolbar.setNavigationOnClickListener(view -> finish());

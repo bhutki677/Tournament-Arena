@@ -77,6 +77,10 @@ yes | /opt/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
 
 * `yes | sdkmanager --licenses` must run before any package install, otherwise the
   install blocks on the licence prompt.
+* `sdkmanager` needs `JAVA_HOME` exported **inside the same shell** that runs it - a
+  bare `PATH` entry is not enough, and it fails with
+  `ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH`.
+  `source /opt/env.sh` first.
 * There is no emulator and no hardware acceleration on this host; verification is a
   compile + resource-link (`assembleDebug`), not an on-device run.
 * `org.gradle.daemon=false` is set in `gradle.properties`; every task forks a

@@ -52,8 +52,9 @@ public class HomeFragment extends Fragment {
         binding.homeLiveList.setHasFixedSize(true);
         binding.homeFeaturedList.setHasFixedSize(true);
 
-        stateController = new StateController(binding.homeSwipe, binding.homeLoading,
-                binding.homeEmpty, binding.homeError, binding.homeEmpty.emptyTitle,
+        stateController = new StateController(binding.homeSwipe, binding.homeLoading.getRoot(),
+                binding.homeEmpty.getRoot(), binding.homeError.getRoot(),
+                binding.homeEmpty.emptyTitle,
                 binding.homeEmpty.emptyMessage, binding.homeError.errorMessage);
 
         binding.homeSwipe.setOnRefreshListener(this::loadTournaments);

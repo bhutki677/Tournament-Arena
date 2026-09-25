@@ -31,8 +31,10 @@ public class TournamentDetailsActivity extends AppCompatActivity {
 
         tournamentId = getIntent().getStringExtra(AppConstants.ARG_TOURNAMENT_ID);
 
-        stateController = new StateController(binding.detailsContent, binding.detailsLoading,
-                binding.detailsEmpty, binding.detailsError, binding.detailsEmpty.emptyTitle,
+        stateController = new StateController(binding.detailsContent,
+                binding.detailsLoading.getRoot(),
+                binding.detailsEmpty.getRoot(), binding.detailsError.getRoot(),
+                binding.detailsEmpty.emptyTitle,
                 binding.detailsEmpty.emptyMessage, binding.detailsError.errorMessage);
 
         binding.detailsToolbar.setNavigationOnClickListener(view -> finish());

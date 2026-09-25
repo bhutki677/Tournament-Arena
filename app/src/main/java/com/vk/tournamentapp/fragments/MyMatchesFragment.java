@@ -49,8 +49,10 @@ public class MyMatchesFragment extends Fragment {
         binding.matchesCompletedList.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.matchesCompletedList.setHasFixedSize(true);
 
-        stateController = new StateController(binding.matchesScroll, binding.matchesLoading,
-                binding.matchesEmpty, binding.matchesError, binding.matchesEmpty.emptyTitle,
+        stateController = new StateController(binding.matchesScroll,
+                binding.matchesLoading.getRoot(),
+                binding.matchesEmpty.getRoot(), binding.matchesError.getRoot(),
+                binding.matchesEmpty.emptyTitle,
                 binding.matchesEmpty.emptyMessage, binding.matchesError.errorMessage);
 
         binding.matchesError.errorRetryButton.setOnClickListener(v -> loadMatches());

@@ -47,8 +47,9 @@ public class WalletFragment extends Fragment {
         binding.walletTransactionsList.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.walletTransactionsList.setHasFixedSize(true);
 
-        stateController = new StateController(binding.walletSwipe, binding.walletLoading,
-                binding.walletEmpty, binding.walletError, binding.walletEmpty.emptyTitle,
+        stateController = new StateController(binding.walletSwipe, binding.walletLoading.getRoot(),
+                binding.walletEmpty.getRoot(), binding.walletError.getRoot(),
+                binding.walletEmpty.emptyTitle,
                 binding.walletEmpty.emptyMessage, binding.walletError.errorMessage);
 
         binding.walletSwipe.setOnRefreshListener(this::loadWallet);

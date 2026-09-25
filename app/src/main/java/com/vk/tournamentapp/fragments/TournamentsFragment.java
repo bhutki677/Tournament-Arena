@@ -46,8 +46,9 @@ public class TournamentsFragment extends Fragment {
         binding.tournamentsList.setLayoutManager(new LinearLayoutManager(requireContext()));
         binding.tournamentsList.setHasFixedSize(true);
 
-        stateController = new StateController(binding.tournamentsContent, binding.tournamentsLoading,
-                binding.tournamentsEmpty, binding.tournamentsError,
+        stateController = new StateController(binding.tournamentsContent,
+                binding.tournamentsLoading.getRoot(),
+                binding.tournamentsEmpty.getRoot(), binding.tournamentsError.getRoot(),
                 binding.tournamentsEmpty.emptyTitle, binding.tournamentsEmpty.emptyMessage,
                 binding.tournamentsError.errorMessage);
 
